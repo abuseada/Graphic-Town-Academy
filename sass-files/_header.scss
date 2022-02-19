@@ -1,0 +1,120 @@
+// Colors
+// Color
+$main-color:  #EC294C;
+$sec-color:   #19191A;
+$light-color: #f4f4f4;
+$btn-1:       #E21A66;
+$btn-2:       #E8A412;
+$btn-3:       #21378F;
+$btn-4:       #01196D;
+
+/* Start Header */
+
+header {
+    display: flex;
+    background-color: $light-color;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(var(--header-height) + 0.5rem);
+    column-gap: 3rem;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.header .logo img {
+    width: 50%;
+    margin-top: 5px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 8px;
+}
+
+.nav-link {
+    padding: 10px;
+    color: $sec-color;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--main-transtation);
+}
+
+.nav-link:hover {
+    color: $main-color;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.header-toggle,
+.header-close {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: calc(var(--header-height) + 0.75rem);
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .logo img {
+        width: 30%;
+    }
+    .header-toggle {
+        display: inline;
+        color: $light-color;
+        background-color: $main-color;
+        font-size: 24px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .header-close {
+        position: absolute;
+        left: 24px;
+        display: block;
+        font-size: 24px;
+        border: 50%;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .header-close:hover,
+    .header-toggle:hover {
+        background-color: $main-color;
+    }
+    .nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: $sec-color;
+        color: $light-color;
+        width: 45%;
+        height: 100vh;
+        padding: 24px 0;
+        transition: var(--sec-transtation);
+        z-index: 999;
+    }
+    .nav-link {
+        color: $light-color;
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+    }
+    .nav-item {
+        margin: 2rem 0;
+    }
+    .active-menu {
+        left: 0;
+    }
+}
+
+/* End Header */

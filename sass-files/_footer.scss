@@ -1,0 +1,60 @@
+// Color
+$main-color:  #EC294C;
+$sec-color:   #19191A;
+$light-color: #f4f4f4;
+$btn-1:       #E21A66;
+$btn-2:       #E8A412;
+$btn-3:       #21378F;
+$btn-4:       #01196D;
+
+/* Start Footer */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(var(--header-height) + 0.5rem);
+    column-gap: 3rem;
+    background-color: $sec-color;
+}
+
+.footer {
+    color: $light-color;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 50%;
+}
+
+.footer-title {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.footer-title span {
+    cursor: pointer;
+    color: $main-color;
+}
+
+.footer-title span:hover {
+    color: $btn-2;
+}
+
+@media (max-width: 768px){
+    footer {
+        height: calc(var(--header-height) + 0.75rem);
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 25px;
+    }
+    .footer-title {
+        font-size: 0.8em;
+        font-weight: 500;
+    }
+    .footer-logo {
+        width: 40%;
+    }
+}
+
+/* Emd Footer */
