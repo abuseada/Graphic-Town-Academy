@@ -166,7 +166,7 @@ div.co {
 
 .container {
     width: 100%;
-    height: 100vh;
+    margin-bottom: 50px;
 }
 
 .swiper {
@@ -203,14 +203,14 @@ div.co {
     cursor: pointer;
     border-radius: 25px;
     margin-left: 25px;
-    height:212.5px;
-    width:350px;
+    height:357px;
+    width:476px;
 }
 
 .mySwiper2 .swiper-slide img{
     cursor: pointer;
-    height:212.5px;
-    width:350px;
+    height:357px;
+    width:476px;
     object-fit: cover;
     transition: var(--main-transtation);
 }
