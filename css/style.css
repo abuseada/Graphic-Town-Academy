@@ -317,8 +317,8 @@ div.co {
 }
 
 .rating-card {
-    width: 413px;
-    height: 463px;
+    width: calc(424px / 1.5px);
+    height: calc(462px / 1.5px);
     border: 1px solid #EC294C;
     border-radius: 20px;
     display: flex;
