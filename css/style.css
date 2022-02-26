@@ -1,0 +1,327 @@
+/* Start Varlables */
+:root {
+    /* Header Hight */
+    --header-height: 3.5rem; /*56px*/
+
+    /*========== font Sizes ==========*/
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --font-medium: 400;
+    --font-semi-bold: 600;
+
+    /*========== Margenes ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --m-0-5: .5rem;
+    --m-0-75: .75rem;
+    --m-1: 1rem;
+    --m-1-5: 1.5rem;
+    --m-2: 2rem;
+    --m-2-5: 2.5rem;
+
+    /*========== Transition ==========*/
+    --main-transtation: all 0.5s ease;
+    --sec-transtation: all 0.7s ease-in-out;
+
+    /*========== Card padding ==========*/
+    --card-padding: 1.9rem 0.95rem;
+
+    /*========== Border radius ==========*/
+    --border-radius: 1.25rem;
+
+    /*========== Box shadow ==========*/
+    --box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+}
+
+/* End Varlables */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+
+/* Srart Landing */
+
+.landing-page {
+    position: relative;
+    margin: 0 auto 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.all-img {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(/stocks/landing-imgs/landing-img.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: var(--main-transtation);
+}
+
+/* Landing PAge Go Down Icon */
+
+.landing-page .go-down {
+    color: #EC294C;
+    position: absolute;
+    font-size: 1.5em;
+    bottom: 30px;
+    right: 50%;
+    transition: var(--main-transtation);
+}
+
+.landing-page .go-down:hover {
+    color: #fff;
+}
+
+.landing-page .go-down ion-icon {
+    animation: bouncing 1.5s infinite;
+}
+
+div.co {
+    transform: translateY(13%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.co .text-img {
+    margin-top: 150px;
+    margin-bottom: 35px;
+    width: 25%;
+}
+
+.co .text2-img {
+    margin-top: 10px;
+    width: 15%;
+}
+
+.adobe-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.adobe-icon img {
+    width: 75px;
+    margin-left: 10px;
+}
+
+.adobe-icon .indesign {
+    width: 68px;
+    transition: var(--main-transtation);
+}
+
+.adobe-icon .photoshop {
+    width: 70px;
+    transition: var(--main-transtation);
+}
+
+.adobe-icon .illustrator {
+    width: 62px;
+    transition: var(--main-transtation);
+}
+
+.adobe-icon .illustrator:hover,
+.photoshop:hover, .indesign:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .co .text-img {
+        width: 50%;
+        margin-top: 250px;
+    }
+    .co .text2-img {
+        margin-top: 20px;
+        width: 40%;
+    }
+    .adobe-icon img {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .co .text-img {
+        width: 70%;
+    }
+    .co .text2-img {
+        margin-top: 20px;
+        width: 55%;
+    }
+    .adobe-icon img {
+        width: 25px;
+    }
+}
+
+/* Imge Animation Landing */
+
+@keyframes up-and-down {
+    0%,
+    100% {
+        top: 0;
+    }
+    50% {
+        top: -50px;
+    }
+}
+
+@keyframes bouncing {
+    0%, 10%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40%, 60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* End Landing */
+
+/* Start Courses Section */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(413px, 1fr));
+    gap: 15px;
+    padding: 0 100px;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+}
+
+.card {
+    position: relative;
+    max-width: 413px;
+    max-height: 463px;
+}
+
+.card img {
+    width: 413px;
+    border-radius: 25px;
+}
+
+.details-card {
+    position: absolute;
+    text-align: center;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    top: -15px;
+    left: 0;
+    opacity: 0;
+    background: linear-gradient(0deg, rgba(2,0,30,1) 0%, rgba(0,0,0,0) 100%);
+    transition: var(--main-transtation);
+}
+
+.card:hover .details-card {
+    display: block;
+    opacity: 1;
+    top: 0;
+}
+
+.txt-btn h3, a {
+    bottom: 0;
+    right:  0;
+    margin-top: 350px;
+}
+
+.txt-btn h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .box {
+        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .box img {
+        width: 100%;
+        /* height: 385.83px; */
+    }
+    .txt-btn h3, a {
+        bottom: 0;
+        right:  0;
+        margin-top: 150px;
+    }
+}
+
+/* End Courses Section */
+
+/* Start student-work Section */
+
+[data-component="slideshow"] .slide {
+	display: none;
+    text-align: center;
+}
+
+[data-component="slideshow"] .slide.active {
+	display: block;
+}
+
+#slideshow-example {
+    padding: 0 100px;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+}
+
+.slide {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.slide img {
+    width: 700px;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    #slideshow-example {
+        padding: 0;
+        display: flex;
+    }
+    .slide img {
+        width: 400px;
+    }
+}
+
+/* End student-work Section */
+
+/* Start Rating */
+
+.rating-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(413px, 1fr));
+    gap: 15px;
+    padding: 0 100px;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+}
+
+.rating-card {
+    width: 413px;
+    height: 463px;
+    border: 1px solid #EC294C;
+    border-radius: 20px;
+    display: flex;
+}
+
+/* End Rating */
