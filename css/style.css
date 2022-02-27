@@ -317,11 +317,107 @@ div.co {
 }
 
 .rating-card {
-    width: calc(424px / 1.5px);
-    height: calc(462px / 1.5px);
+    position: relative;
+    width: 250px;
+    height: 350px;
     border: 1px solid #EC294C;
+    background: none;
     border-radius: 20px;
-    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.rating-card .rating-icon .letter::after {
+    content: "A";
+    position: absolute;
+    top: 0;
+    left: 35%;
+    border-radius: 50%;
+    margin: 0px auto 50px;
+    padding: 20px 28px;
+    background: #EC294C;
+}
+
+.rating-icon {
+    
 }
 
 /* End Rating */
+
+/* start contacts */
+
+.parent-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+    max-width: 100%;
+    padding: 0 150px;
+}
+
+/* ========= Map ========== */
+
+.map h3 {
+    color: #EC294C;
+    margin-bottom: 20px;
+}
+
+.map i {
+    color: #EC294C;
+    font-size: 20px;
+}
+.map .adress {
+    margin-bottom: 5px;
+}
+.map a {
+    color: #000;
+    font-size: 18px;
+}
+
+/* ========= Contacts ========== */
+
+
+
+/* ========= Form ========== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+    border-radius: 10px;
+    max-width: 100%;
+    width: 500px;
+}
+
+form h3 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+form input, form textarea,
+form select, form select option {
+    border: 1px solid #000;
+    margin: 10px 0;
+    padding: 14px;
+    outline: none;
+    /* font-family: 'Baloo Bhaijaan 2', cursive; */
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #EC294C;
+    color: #fff;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    width: 150px;
+    margin: 20px 0;
+    border-radius: 25px;
+}
+
+/* end contacts */
