@@ -1,0 +1,99 @@
+/* start contacts */
+
+.parent-contact {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 15px;
+    max-width: 100%;
+    padding: 0 150px;
+}
+
+/* ========= Map ========== */
+
+iframe {
+    position: absolute;
+    top: 0;
+    /* right: 15%; */
+}
+
+.map iframe {
+    display: block;
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+/* ========= Contacts ========== */
+
+h2 {
+    color: #403333;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 80vw;
+    padding: 15px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background: #403333;
+    color: white;
+    border-radius: 5px;
+    padding: 7px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.212);
+
+}
+.contact-items{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    /* margin-left: 5px; */
+}
+.contact-items-wrapper{
+    padding: 25px;
+}
+
+.details h3 {
+    text-align: center;
+}
+
+.details p {
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.details p a{
+color: white;
+}
+.details p a:hover{
+color: rgb(160, 154, 154);
+}
+
+.contact-items ion-icon{
+    width: 12px;
+    margin: 5px;
+}
+
+@media screen and (max-width:780px) {
+    .contact-info {
+    flex-direction: column;
+    width: 90%;
+}
+form{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.details{
+    width: 100%;
+}
+}
+
+/* end contacts */
