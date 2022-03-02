@@ -20,6 +20,30 @@
 
     <!-- line Icons Link -->
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+
+    <!-- in line style -->
+    <style>
+        #textErea {
+            display: -webkit-box;
+            -webkit-line-clamp: 16;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        #readMore:before {
+            content: "إقراء المزيد";
+            color: #01196D;
+            cursor: pointer;
+        }
+        #readMore {
+            margin-bottom: 15px;
+        }
+        #textErea.active {
+            display: block;
+        }
+        #textErea.active #readMore:before {
+            content: "أقل";
+        }
+    </style>
 </head>
 <body>
     <!-- Start Header -->
@@ -51,49 +75,58 @@
         </div>
         <div class="txt-details">
             <h1 class="txt-head">كورس أفتر إفيكت</h1>
-            <div class="txt-paragraph">
-                <div class="first-section">
-                    <p>
-                        <h3>المستوى الأولي :</h3>
-                        <li>- التعرف علي الواجهة الأساسية للبرنامج والقوائم المهمة وتنظيم العمل داخل البرنامج.</li>
-                        <li>- تطبيق على الـ stop motion.</li>
-                        <li>- تعلم مبادئ التحريك 12 principle of animation والتطبيق عليها.</li>
-                        <li>- تعلم اساسيات التحريك والكي فريم وانواعه المختلفة.</li>
-                        <li>- التعامل مع ملفات الفيكتور وكيفية تجهيزها للتحريك داخل برنامج الاليستريتور.</li>
-                        <li>- تعلم مبدأ الـ parent وربط الحركة ببعضها.</li>
-                        <li>- تحريك الاشكال والتكرار وخصائص الـ shape layer.</li>
-                        <li>- التعامل مع الماسك و الـ track matte.</li>
-                        <li>- إضافة ملفات الصوت والتعامل معها.</li>
-                        <li>- تحريك النصوص والكتابة title animation.</li>
-                        <li>- عمل الانتقالات بين المشاهد.</li>
-                        <li>- عمل مونتاج بسيط علي الفيديوهات وتطبيق ال doodles على الفيديو.</li>
-                        <li>- استخدام العديد من التأثيرات المختلفة effects وتطبيقات عليها.</li>
-                        <li>- شرح استخدام بعض الـ plug-ins للمساعدة في التحريك.</li>
-                        <li>- عمل فيديو كامل كمشروع تخرج يشمل كل ما سبق.</li>
-                    </p>
-                </div>
-                <div class="sec-section">
-                    <h3>المستوى الثاني :</h3>
-                    <p>
-                        <li>- تجهيز وتحريك الشخصيات الكرتونية</li>
-                        <li>- character rigging and animation.</li>
-                        <li>- تجهيز وتحريك الوجوه وملامح الوجه</li>
-                        <li>- التعامل مع الاكواد و ال expressions.</li>
-                        <li>- الـ 3D layer.</li>
-                        <li>- التعامل مع الكاميرا والتطبيق عليها.</li>
-                        <li>- التعامل مع ال light.</li>
-                        <li>- تحويل الاشكال ال morphing.</li>
-                        <li>- شرح مجموعة من السكريبتات و ال plug-ins المهمة.</li>
-                        <li>- شرح مجموعة متنوعة من ال effects وتطبيقاتها.</li>
-                        <li>- عمل فيديو كامل كمشروع تخرج يشمل كل ما سبق.</li>
-                    </p>
+            <div id="textErea">
+                <div class="txt-paragraph">
+                    <div class="first-section">
+                        <p>
+                            <h3>المستوى الأولي :</h3>
+                            <li>- التعرف علي الواجهة الأساسية للبرنامج والقوائم المهمة وتنظيم العمل داخل البرنامج.</li>
+                            <li>- تطبيق على الـ stop motion.</li>
+                            <li>- تعلم مبادئ التحريك 12 principle of animation والتطبيق عليها.</li>
+                            <li>- تعلم اساسيات التحريك والكي فريم وانواعه المختلفة.</li>
+                            <li>- التعامل مع ملفات الفيكتور وكيفية تجهيزها للتحريك داخل برنامج الاليستريتور.</li>
+                            <li>- تعلم مبدأ الـ parent وربط الحركة ببعضها.</li>
+                            <li>- تحريك الاشكال والتكرار وخصائص الـ shape layer.</li>
+                            <li>- التعامل مع الماسك و الـ track matte.</li>
+                            <li>- إضافة ملفات الصوت والتعامل معها.</li>
+                            <li>- تحريك النصوص والكتابة title animation.</li>
+                            <li>- عمل الانتقالات بين المشاهد.</li>
+                            <li>- عمل مونتاج بسيط علي الفيديوهات وتطبيق ال doodles على الفيديو.</li>
+                            <li>- استخدام العديد من التأثيرات المختلفة effects وتطبيقات عليها.</li>
+                            <li>- شرح استخدام بعض الـ plug-ins للمساعدة في التحريك.</li>
+                            <li>- عمل فيديو كامل كمشروع تخرج يشمل كل ما سبق.</li>
+                        </p>
+                    </div>
+                    <div class="sec-section">
+                        <h3>المستوى الثاني :</h3>
+                        <p>
+                            <li>- تجهيز وتحريك الشخصيات الكرتونية</li>
+                            <li>- character rigging and animation.</li>
+                            <li>- تجهيز وتحريك الوجوه وملامح الوجه</li>
+                            <li>- التعامل مع الاكواد و ال expressions.</li>
+                            <li>- الـ 3D layer.</li>
+                            <li>- التعامل مع الكاميرا والتطبيق عليها.</li>
+                            <li>- التعامل مع ال light.</li>
+                            <li>- تحويل الاشكال ال morphing.</li>
+                            <li>- شرح مجموعة من السكريبتات و ال plug-ins المهمة.</li>
+                            <li>- شرح مجموعة متنوعة من ال effects وتطبيقاتها.</li>
+                            <li>- عمل فيديو كامل كمشروع تخرج يشمل كل ما سبق.</li>
+                        </p>
+                    </div>
                 </div>
             </div>
+            <span id="readMore"></span>
             <a href="https://forms.gle/yMrNC6966ofrixuq8" class="btn" target="_blank">سجل الآن</a>
         </div>
     </section>
 
     <!-- Ens Course Details -->
+
+    <!-- Start Form -->
+
+    <section></section>
+
+    <!-- End Form -->
     
     <!-- Start Footer -->
 
@@ -108,6 +141,11 @@
 
     <!-- JavaScript File -->
     <script src="/js/script.js"></script>
+    <script>
+        document.getElementById('readMore').addEventListener('click', function(){
+            document.getElementById('textErea').classList.toggle('active');
+        });
+    </script>
     
     <!-- ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

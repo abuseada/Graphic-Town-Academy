@@ -15,7 +15,7 @@
     <link rel="shortcut icon" type="image/png" href="/stocks/GT-Icon.png">
 
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>    
 
     <!-- Google Font Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -165,7 +165,7 @@
         <div class="rating-box">
             <div class="rating-card">
                 <div class="rating-icon">
-                    <h3>A</h3>
+                    <h3 class="letter letter-1"></h3>
                 </div>
                 <div class="rating-txt">
                     <h3 class="name">Ahmed El-Sayed</h3>
@@ -176,6 +176,49 @@
     </section>
 
     <!-- End Rating -->
+
+    <!-- Start Contact -->
+
+    <section class="contact container" id="contact-us">
+        <div class="the-head">
+            <h1 class="title">تواصل معنا</h1>
+        </div>
+        <div class="parent-contact">
+            <div class="map">
+                <iframe src="https://maps.google.com/maps?q=Graphic%20Town&t=&z=19&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+            <div class="contact-info">
+                <div class="details">
+                    <div class="cotacts-flex">
+                        <div class="contact-items-wrapper">
+                            <div class="contact-items">
+                                <ion-icon name="navigate"></ion-icon>
+                                <p><strong>العنوان: </strong>طنطا -اكاديميه جرافيك تاون- ش عمر بن عبد العزيز</p>
+                            </div>
+                            <div class="contact-items">
+                                <ion-icon name="phone-portrait"></ion-icon>
+                                <p><strong>التلفون:</strong>01094040941 – 01112223883</p>
+                            </div>
+                            <div class="contact-items">
+                                <ion-icon name="send"></ion-icon>
+                                <p><strong>الإيميل:</strong><a href="#">info@graphictown-acadmy.com</a> </p>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <form onsubmit="sendEmail(); reset(); return false;">
+                                <input type="text" id="name" placeholder="إسمك" required>
+                                <input type="email" id="email" placeholder="إيميل" required>
+                                <input type="text" id="phone" placeholder="رقم التلفون" required>
+                                <textarea id="message" rows="4" placeholder="رسالتك هنا"></textarea>
+                                <button type="submit">إرســــال</button>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+    </section>
+
+    <!-- End Contact -->
 
     <!-- Start Footer -->
 
@@ -189,6 +232,25 @@
     <!-- End Footer -->
     <!-- JavaScript File -->
     <script src="/js/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "mail.graphictown-ads.com",
+                Username : "info@graphictown-ads.com",
+                Password : "Read=more3217736",
+                To : 'info@graphictown-ads.com',
+                From : document.getElementById("email").value,
+                Subject : "متدرب جديد",
+                Body : "الإسم : " + document.getElementById("name").value
+                        + "<br> الإيميل :" +document.getElementById("email").value
+                        + "<br> الكورس :" +document.getElementById("gtCourse").value
+                        + "<br> الرسالة : " +document.getElementById("message").value
+            }).then(
+            message => alert("تم الإرسال بنجاح, سوف نتواصل معاك قريباً")
+            );
+        }
+    </script>
 
     <!-- ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

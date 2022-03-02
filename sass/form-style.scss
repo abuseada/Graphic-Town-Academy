@@ -1,0 +1,49 @@
+// Import Global Rules
+@import './global-rules';
+
+// Import Header
+@import './header';
+
+// Import Footer
+@import './footer';
+
+/* ========= Form ========== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+    border-radius: 10px;
+    max-width: 100%;
+    width: 500px;
+}
+
+form h3 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+form input, form textarea,
+form select, form select option {
+    border: 1px solid #000;
+    margin: 10px 0;
+    padding: 14px;
+    outline: none;
+    /* font-family: 'Baloo Bhaijaan 2', cursive; */
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #EC294C;
+    color: #fff;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    width: 150px;
+    margin: 20px 0;
+    border-radius: 25px;
+}

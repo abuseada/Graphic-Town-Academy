@@ -45,6 +45,10 @@ div .first-section::after {
     color: $main-color;
 }
 
+footer {
+    margin-top: 56px;
+}
+
 @media screen and (max-width: 768px) {
     section {
         padding: 15px;
@@ -70,3 +74,4 @@ div .first-section::after {
         margin-bottom: 15px;
     }
 }
+

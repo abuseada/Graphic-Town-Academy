@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -257,77 +256,6 @@ header {
 }
 
 /* End Header */
-section {
-  padding: 50px 320px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.course-details {
-  max-width: 100%;
-  max-height: 100%;
-  margin-top: 100px;
-}
-
-.course-details img {
-  width: 413px;
-  height: 463px;
-  border-radius: 25px;
-}
-
-.txt-details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.txt-head {
-  font-size: 1.75rem;
-  color: #EC294C;
-  font-weight: 700;
-  margin-bottom: 25px;
-}
-
-.txt-paragraph div {
-  max-width: 45rem;
-  margin-bottom: 15px;
-  line-height: 1.5;
-}
-
-div .first-section::after {
-  content: "ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ";
-  font-size: medium;
-  margin-top: 20px;
-  color: #EC294C;
-}
-
-@media screen and (max-width: 768px) {
-  section {
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .photo img {
-    height: 308px;
-    width: 276px;
-    margin-bottom: 50px;
-  }
-  .txt-details {
-    display: flex;
-    align-items: center;
-  }
-  .txt-head {
-    margin-bottom: 15px;
-  }
-  .txt-paragraph {
-    margin-bottom: 15px;
-  }
-}
-
 /* Start Footer */
 footer {
   display: flex;
@@ -379,4 +307,43 @@ footer {
 }
 
 /* Emd Footer */
-/*# sourceMappingURL=main-pages-style.css.map */
+/* ========= Form ========== */
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  border-radius: 10px;
+  max-width: 100%;
+  width: 500px;
+}
+
+form h3 {
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+form input, form textarea,
+form select, form select option {
+  border: 1px solid #000;
+  margin: 10px 0;
+  padding: 14px;
+  outline: none;
+  /* font-family: 'Baloo Bhaijaan 2', cursive; */
+  font-size: 18px;
+  border-radius: 15px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #EC294C;
+  color: #fff;
+  font-family: 'Baloo Bhaijaan 2', cursive;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  width: 150px;
+  margin: 20px 0;
+  border-radius: 25px;
+}
+/*# sourceMappingURL=form-style.css.map */
