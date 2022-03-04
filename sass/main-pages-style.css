@@ -36,6 +36,10 @@ li {
   list-style: none;
 }
 
+input, textarea, button {
+  font-family: 'Almarai', sans-serif;
+}
+
 .the-head {
   margin-top: 50px;
 }
@@ -130,7 +134,56 @@ li {
 }
 
 /* btn */
-.btn {
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.btn-1 {
+  font-size: 0.938rem;
+  color: #f4f4f4;
+  padding: 0.5rem 1.5rem;
+  background-color: #E21A66;
+  border-radius: 8px;
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  transition: all 0.5s ease;
+}
+
+.btn-1:hover {
+  color: #f2f2f2;
+  background-color: #ea437b;
+}
+
+.btn-2 {
+  font-size: 0.938rem;
+  color: #19191A;
+  padding: 0.5rem 1.5rem;
+  background-color: #E8A412;
+  border-radius: 8px;
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  transition: all 0.5s ease;
+}
+
+.btn-2:hover {
+  background-color: #d9ac26;
+}
+
+.btn-3 {
+  font-size: 0.938rem;
+  color: #f4f4f4;
+  padding: 0.5rem 1.5rem;
+  background-color: #01196D;
+  border-radius: 8px;
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  transition: all 0.5s ease;
+}
+
+.btn-3:hover {
+  color: #f2f2f2;
+  background-color: #150080;
+}
+
+.btn-4 {
   font-size: 0.938rem;
   color: #f4f4f4;
   padding: 0.5rem 1.5rem;
@@ -140,7 +193,7 @@ li {
   transition: all 0.5s ease;
 }
 
-.btn:hover {
+.btn-4:hover {
   color: #f2f2f2;
   background-color: #01196D;
 }
@@ -258,7 +311,7 @@ header {
 
 /* End Header */
 section {
-  padding: 50px 320px;
+  padding: 50px 150px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

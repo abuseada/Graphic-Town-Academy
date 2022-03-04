@@ -30,6 +30,10 @@ $btn-1:       #E21A66;
 $btn-2:       #E8A412;
 $btn-3:       #21378F;
 $btn-4:       #01196D;
+$btn-h1:      #ea437b;
+$btn-h2:      #d9ac26;
+$btn-h3:      #1f1fc7;
+$btn-h4:      #150080;
 // ============== Transition ==============
 $main-transtation:       all 0.5s ease;
 $sec-transtation: all 0.7s ease-in-out;
@@ -53,6 +57,8 @@ $box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
 
 /* End Scroll Bar */
 
+// Start Global Rules
+
 body {
     font-family: 'Almarai', sans-serif;
 }
@@ -68,6 +74,13 @@ a {
 li {
     list-style: none;
 }
+
+input, textarea, button {
+    font-family: 'Almarai', sans-serif;
+}
+// End Global Rules
+
+// Start Header Title
 
 .the-head {
     margin-top: 50px;
@@ -162,9 +175,66 @@ li {
     }
 }
 
+// Start Header Title
+
 /* btn */
 
-.btn {
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.btn-1 {
+    font-size: $normal-font-size;
+    color: $light-color;
+    padding: $m-0-5 $m-1-5;
+    background-color: $btn-1;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+    transition: $main-transtation;
+}
+
+.btn-1:hover {
+    color: #f2f2f2;
+    background-color: $btn-h1;
+}
+
+// ==============================================================
+
+.btn-2 {
+    font-size: $normal-font-size;
+    color: $sec-color;
+    padding: $m-0-5 $m-1-5;
+    background-color: $btn-2;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+    transition: $main-transtation;
+}
+
+.btn-2:hover {
+    background-color: $btn-h2;
+}
+
+// ==============================================================
+
+.btn-3 {
+    font-size: $normal-font-size;
+    color: $light-color;
+    padding: $m-0-5 $m-1-5;
+    background-color: $btn-4;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+    transition: $main-transtation;
+}
+
+.btn-3:hover {
+    color: #f2f2f2;
+    background-color: $btn-h4;
+}
+
+// ==============================================================
+
+.btn-4 {
     font-size: $normal-font-size;
     color: $light-color;
     padding: $m-0-5 $m-1-5;
@@ -174,7 +244,9 @@ li {
     transition: $main-transtation;
 }
 
-.btn:hover {
+.btn-4:hover {
     color: #f2f2f2;
     background-color: $btn-4;
 }
+
+// ==============================================================

@@ -1,5 +1,5 @@
 section {
-    padding: 50px 320px;
+    padding: 50px 150px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -45,10 +45,6 @@ div .first-section::after {
     color: $main-color;
 }
 
-footer {
-    margin-top: 56px;
-}
-
 @media screen and (max-width: 768px) {
     section {
         padding: 15px;
@@ -74,4 +70,3 @@ footer {
         margin-bottom: 15px;
     }
 }
-

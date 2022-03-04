@@ -35,14 +35,6 @@
     --box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
 }
 
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
 /* End Varlables */
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
@@ -200,20 +192,23 @@ div.co {
 }
 
 .box {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(413px, 1fr));
-    gap: 15px;
-    padding: 0 100px;
-    align-content: center;
-    justify-content: space-evenly;
+    gap: 15px; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
+    align-content: space-between;
 }
 
 .card {
     position: relative;
     max-width: 413px;
     max-height: 463px;
+    flex: 1 1 auto;
+    margin: 12px;
 }
 
 .card img {
@@ -254,17 +249,19 @@ div.co {
 @media screen and (max-width: 768px) {
     .box {
         padding: 0;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        flex-direction: column;
     }
-    .box img {
+    .card img {
         width: 100%;
         /* height: 385.83px; */
+    }
+    .card {
+        margin: 30px;
     }
     .txt-btn h3, a {
         bottom: 0;
         right:  0;
-        margin-top: 150px;
+        margin-top: 260px;
     }
 }
 
@@ -354,165 +351,132 @@ div.co {
 
 /* start contacts */
 
-.parent-contact {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 15px;
-    max-width: 100%;
-    padding: 0 150px;
+.contact-in {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 15px;
+    background: #19191A;
+    margin-bottom: 50px;
 }
 
+@media screen and (max-width: 768px) {
+    .contact-in {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+}
 /* ========= Map ========== */
 .map {
-    position: relative;
-    width: 1200px;
-    height: 350px;
-}
-
-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-16%, 0);
+    width: 100%;
+    height: auto;
+    flex: 50%;
 }
 
 .map iframe {
-    display: block;
-    border: 0;
-    width: 1200px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    .map {
+        margin-bottom: 20px;
+    }
+}
 /* ========= Contacts ========== */
+.form > h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 25px;
+}
 
-.contact-info {
+.contacts {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    /* margin: auto; */
-    margin-top: -130px;
+    padding: 5px;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.tel, .tel > a {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.socialMedia > p {
+    margin-bottom: 8px;
+}
+
+.socialMedia, .socialMedia > a {
+    color: #fff;
+    padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .contacts:before {
+        content: "";
+        background: #EC294C;
+        height: 2px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .contacts:after {
+        content: "";
+        background: #EC294C;
+        height: 2px;
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+/* ========= Form ========== */
+.form {
+    width: 100%;
+    height: auto;
+    flex: 50%;
+    text-align: center;
+    padding: 20px;
+}
+
+.form:after {
+    content: "";
+    background: #EC294C;
+    height: 2px;
+    width: 75%;
+    margin-top: 15px;
+}
+
+.form-txt, .txt-area {
+    width: 100%;
+    height: 40px;
+    color: #000;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
     padding: 15px;
 }
 
-.details {
-    display: flex;
-    flex-direction: column;
-    background: #19191A;
-    color: white;
-    border-radius: 5px;
-    padding: 7px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.212);
-}
-.contact-items{
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    margin-left: 5px;
-}
-.contact-items-wrapper{
-    padding: 25px;
+.txt-area {
+    height: 150px;
+    overflow: hidden;
 }
 
-.details h3 {
-    text-align: center;
+.btn-3 {
+    width: 100%;
 }
 
-.details p {
-    font-size: 15px;
-    margin-left: 15px;
-}
-
-.details p a{
-    color: white;
-}
-.details p a:hover{
-    color: rgb(160, 154, 154);
-}
-
-.contact-items ion-icon{
-    width: 12px;
-    margin: 5px;
-}
-
-.cotacts-flex {
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    padding: 5px 150px;
-    border-radius: 10px;
-    max-width: 100%;
-    width: 800px;
-}
-    
-form h3 {
-    color: var(--main-color);
-    margin-bottom: 20px;
-}
-    
-form input, form textarea {
-    border: 1px solid var(--sec-color);
-    margin: 10px 0;
-    padding: 14px;
-    outline: none;
-    font-family: 'Baloo Bhaijaan 2', cursive;
-    font-size: 18px;
-    border-radius: 15px;
-}
-    
-form button {
-    padding: 10px;
-    background-color: #EC294C;
-    color: #fff;
-    font-family: 'Baloo Bhaijaan 2', cursive;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 18px;
-    width: 150px;
-    margin: 20px 0;
-    border-radius: 25px;
-}
-
-@media screen and (max-width:780px) {
-    .parent-contact {
-        padding: 0;
-    }
-    .contact-info {
-        flex-direction: column;
-        width: 100%;
-        margin-top: -260px;
-    }
-    .map {
-        width: 350px;
-        height: 200px;
-    }
-    .map iframe {
-        width: 350px;
-        height: 200px;
-    }
-    iframe {
-        transform: translate(-4.5%, 0);
-    }
-    form{
-        width: 120%;
-        margin-bottom: 5px;
-        padding: 5px 10px;
-    }
-    .details{
-        width: 100%;
-        padding: 0;
-    }
-    .cotacts-flex {
-        flex-direction: column;
-        margin: 10px;
+@media screen and (max-width: 768px) {
+    .form {
+        padding: 5px 0;
     }
 }
 
