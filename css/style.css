@@ -184,13 +184,6 @@ div.co {
 
 /* Start Courses Section */
 
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .box {
     /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(413px, 1fr));
@@ -351,133 +344,8 @@ div.co {
 
 /* start contacts */
 
-.contact-in {
-    width: 70%;
-    height: auto;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    border-radius: 15px;
-    background: #19191A;
-    margin-bottom: 50px;
-}
-
-@media screen and (max-width: 768px) {
-    .contact-in {
-        width: 100%;
-        flex-direction: column;
-        margin-bottom: 25px;
-    }
-}
-/* ========= Map ========== */
-.map {
-    width: 100%;
-    height: auto;
-    flex: 50%;
-}
-
-.map iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-@media screen and (max-width: 768px) {
-    .map {
-        margin-bottom: 20px;
-    }
-}
-/* ========= Contacts ========== */
-.form > h3 {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 300;
-    margin-top: 25px;
-}
-
-.contacts {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 5px;
-    justify-content: space-between;
-    margin-top: 5px;
-}
-
-.tel, .tel > a {
-    color: #fff;
-    font-size: 18px;
-    letter-spacing: 2px;
-}
-
-.socialMedia > p {
-    margin-bottom: 8px;
-}
-
-.socialMedia, .socialMedia > a {
-    color: #fff;
-    padding: 5px;
-}
-
-@media screen and (max-width: 768px) {
-    .contacts:before {
-        content: "";
-        background: #EC294C;
-        height: 2px;
-        width: 100%;
-        margin-bottom: 15px;
-    }
-    .contacts:after {
-        content: "";
-        background: #EC294C;
-        height: 2px;
-        width: 100%;
-        margin-top: 15px;
-    }
-}
-/* ========= Form ========== */
-.form {
-    width: 100%;
-    height: auto;
-    flex: 50%;
-    text-align: center;
-    padding: 20px;
-}
-
-.form:after {
-    content: "";
-    background: #EC294C;
-    height: 2px;
-    width: 75%;
-    margin-top: 15px;
-}
-
-.form-txt, .txt-area {
-    width: 100%;
-    height: 40px;
-    color: #000;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    padding: 15px;
-}
-
-.txt-area {
-    height: 150px;
-    overflow: hidden;
-}
-
 .btn-3 {
     width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-    .form {
-        padding: 5px 0;
-    }
 }
 
 /* end contacts */
