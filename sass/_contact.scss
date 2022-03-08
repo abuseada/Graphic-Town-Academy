@@ -55,10 +55,21 @@
     margin-top: 5px;
 }
 
-.tel, .tel > a {
-    color: #fff;
+.tel {
+    color: $light-color;
+    font-size: 18px;
+    transition: $main-transtation;
+}
+
+.tel > a {
+    color: $light-color;
     font-size: 18px;
     letter-spacing: 2px;
+    transition: $main-transtation;
+}
+
+.tel:hover, .tel > a:hover {
+    color: $btn-2;
 }
 
 .socialMedia > p {
@@ -68,22 +79,20 @@
 .socialMedia, .socialMedia > a {
     color: #fff;
     padding: 5px;
+    transition: $main-transtation;
+}
+
+.socialMedia a:hover {
+    color: $btn-2;
 }
 
 @media screen and (max-width: 768px) {
     .contacts:before {
         content: "";
-        background: #EC294C;
+        background: $btn-2;
         height: 2px;
         width: 100%;
         margin-bottom: 15px;
-    }
-    .contacts:after {
-        content: "";
-        background: #EC294C;
-        height: 2px;
-        width: 100%;
-        margin-top: 15px;
     }
 }
 /* ========= Form ========== */
@@ -93,14 +102,6 @@
     flex: 50%;
     text-align: center;
     padding: 20px;
-}
-
-.form:after {
-    content: "";
-    background: #EC294C;
-    height: 2px;
-    width: 75%;
-    margin-top: 15px;
 }
 
 .form-txt, .txt-area {

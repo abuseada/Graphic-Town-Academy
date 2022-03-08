@@ -24,6 +24,7 @@ $font-medium:          400;
 $font-semi-bold:       700;
 // ============== Color ==============
 $main-color:  #EC294C;
+$main-color-h:#C1294C;
 $sec-color:   #19191A;
 $light-color: #f4f4f4;
 $btn-1:       #E21A66;
@@ -60,6 +61,9 @@ $box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
 // Start Global Rules
 
 body {
+    margin: 0;
+	padding: 0;
+	height: 100%;
     font-family: 'Almarai', sans-serif;
 }
 
@@ -255,6 +259,23 @@ button {
 .btn-4:hover {
     color: #f2f2f2;
     background-color: $btn-4;
+}
+
+// ==============================================================
+
+.btn-5 {
+    font-size: $normal-font-size;
+    color: $light-color;
+    padding: $m-0-5 $m-1-5;
+    background-color: $main-color;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+    transition: $main-transtation;
+}
+
+.btn-5:hover {
+    color: #f2f2f2;
+    background-color: $main-color-h;
 }
 
 // ==============================================================

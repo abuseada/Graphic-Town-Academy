@@ -31,10 +31,10 @@
         <nav class="nav" id="nav-menu">
             <ion-icon name="close-outline" class="header-close" id="close-menu"></ion-icon>
             <ul class="nav-list">
-                <li class="nav-item"><a href="/index.html" class="nav-link">الصفحة الرئيسية</a></li>
-                <li class="nav-item"><a href="#courses" class="nav-link">كورستنا</a></li>
-                <li class="nav-item"><a href="#student-works" class="nav-link">أعمال المتدربين</a></li>
-                <li class="nav-item"><a href="#reviwes" class="nav-link">آراء المتدربين</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">الصفحة الرئيسية</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">كورستنا</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">أعمال المتدربين</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">آراء المتدربين</a></li>
                 <li class="nav-item"><a href="#contact-us" class="nav-link">تواصل معنا</a></li>
             </ul>
         </nav>
@@ -66,6 +66,54 @@
 
     <!-- Ens Course Details -->
 
+        <!-- Start Course Section -->
+
+        <section class="courses container" id="courses">
+            <div class="the-head">
+                <h1 class="title">كورستنا</h1>
+            </div>
+            <!-- Img Box -->
+            <div class="box">
+                <div class="card">
+                    <img src="/stocks/Courses/1.png" alt="after-effects">
+                    <div class="details-card txt-btn">
+                        <h3>كورس After Effects</h3>
+                        <a href="after-effects.html" class="btn-2" target="_blank">اقراء المزيد</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/stocks/Courses/2.png" alt="photoshop">
+                    <div class="details-card txt-btn">
+                        <h3>كورس Photoshop</h3>
+                        <a href="photoshop.html" class="btn-2" target="_blank">اقراء المزيد</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/stocks/Courses/3.png" alt="illustrator">
+                    <div class="details-card txt-btn">
+                        <h3>كورس Illustrator</h3>
+                        <a href="illustrator.html" class="btn-2" target="_blank">اقراء المزيد</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/stocks/Courses/5.png" alt="photography">
+                    <div class="details-card txt-btn">
+                        <h3>كورس التصوير</h3>
+                        <a href="photography.html" class="btn-2" target="_blank">اقراء المزيد</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/stocks/Courses/6.png" alt="drowing">
+                    <div class="details-card txt-btn">
+                        <h3>كورس الرسم بالرصاص</h3>
+                        <a href="drowing.html" class="btn-2" target="_blank">اقراء المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- End Course Section -->
+
     <!-- Start Contact -->
 
     <section class="contact container" id="contact-us">
@@ -81,7 +129,7 @@
                     <input class="form-txt" type="text" id="name" placeholder="إسمك" required>
                     <input class="form-txt" type="text" id="phone" placeholder="رقم التلفون" required>
                     <textarea class="txt-area" id="message" rows="4" placeholder="رسالتك هنا"></textarea>
-                    <button class="btn-3" type="submit" style="width: 100%;">إرســــال</button>
+                    <button class="btn-5" type="submit" style="width: 100%;">إرســــال</button>
                 </form>
                 <h3>- OR -</h3>
                 <div class="contacts">
@@ -115,6 +163,24 @@
 
     <!-- JavaScript File -->
     <script src="/js/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "mail.graphictown-ads.com",
+                Username : "info@graphictown-ads.com",
+                Password : "Read=more3217736",
+                To : 'info@graphictown-ads.com',
+                From : document.getElementById("name").value,
+                Subject : "متدرب جديد",
+                Body : "الإسم : " + document.getElementById("name").value
+                        + "<br> الإيميل :" +document.getElementById("phone").value
+                        + "<br> الرسالة : " +document.getElementById("message").value
+            }).then(
+            message => alert("تم الإرسال بنجاح, سوف نتواصل معاك قريباً")
+            );
+        }
+    </script>
     
     <!-- ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

@@ -20,6 +20,9 @@
 
 /* End Scroll Bar */
 body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: 'Almarai', sans-serif;
 }
 
@@ -204,6 +207,21 @@ button {
   background-color: #01196D;
 }
 
+.btn-5 {
+  font-size: 0.938rem;
+  color: #f4f4f4;
+  padding: 0.5rem 1.5rem;
+  background-color: #EC294C;
+  border-radius: 8px;
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  transition: all 0.5s ease;
+}
+
+.btn-5:hover {
+  color: #f2f2f2;
+  background-color: #C1294C;
+}
+
 /* Start Header */
 a {
   text-decoration: none;
@@ -316,6 +334,82 @@ header {
 }
 
 /* End Header */
+/* Start Courses Section */
+.box {
+  /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(413px, 1fr));
+    gap: 15px; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+
+.card {
+  position: relative;
+  max-width: 413px;
+  max-height: 463px;
+  flex: 1 1 auto;
+  margin: 30px;
+}
+
+.card img {
+  width: 413px;
+  border-radius: 25px;
+}
+
+.details-card {
+  position: absolute;
+  text-align: center;
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  top: -15px;
+  left: 0;
+  opacity: 0;
+  background: linear-gradient(0deg, #02001e 0%, rgba(0, 0, 0, 0) 100%);
+  transition: var(--main-transtation);
+}
+
+.card:hover .details-card {
+  display: block;
+  opacity: 1;
+  top: 0;
+}
+
+.txt-btn h3, .btn-2 {
+  bottom: 0;
+  right: 0;
+  margin-top: 350px;
+}
+
+.txt-btn h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    padding: 0;
+    flex-direction: column;
+  }
+  .card img {
+    width: 100%;
+    /* height: 385.83px; */
+  }
+  .card {
+    margin: 30px;
+  }
+  .txt-btn h3, a {
+    bottom: 0;
+    right: 0;
+    margin-top: 260px;
+  }
+}
+
+/* End Courses Section */
 /* start contacts */
 .contact-in {
   width: 70%;
@@ -374,10 +468,21 @@ header {
   margin-top: 5px;
 }
 
-.tel, .tel > a {
-  color: #fff;
+.tel {
+  color: #f4f4f4;
+  font-size: 18px;
+  transition: all 0.5s ease;
+}
+
+.tel > a {
+  color: #f4f4f4;
   font-size: 18px;
   letter-spacing: 2px;
+  transition: all 0.5s ease;
+}
+
+.tel:hover, .tel > a:hover {
+  color: #E8A412;
 }
 
 .socialMedia > p {
@@ -387,22 +492,20 @@ header {
 .socialMedia, .socialMedia > a {
   color: #fff;
   padding: 5px;
+  transition: all 0.5s ease;
+}
+
+.socialMedia a:hover {
+  color: #E8A412;
 }
 
 @media screen and (max-width: 768px) {
   .contacts:before {
     content: "";
-    background: #EC294C;
+    background: #E8A412;
     height: 2px;
     width: 100%;
     margin-bottom: 15px;
-  }
-  .contacts:after {
-    content: "";
-    background: #EC294C;
-    height: 2px;
-    width: 100%;
-    margin-top: 15px;
   }
 }
 
@@ -413,14 +516,6 @@ header {
   flex: 50%;
   text-align: center;
   padding: 20px;
-}
-
-.form:after {
-  content: "";
-  background: #EC294C;
-  height: 2px;
-  width: 75%;
-  margin-top: 15px;
 }
 
 .form-txt, .txt-area {

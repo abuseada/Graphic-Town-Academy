@@ -20,6 +20,9 @@
 
 /* End Scroll Bar */
 body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: 'Almarai', sans-serif;
 }
 
@@ -33,6 +36,17 @@ a {
 
 li {
   list-style: none;
+}
+
+input, textarea, button {
+  font-family: 'Almarai', sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .the-head {
@@ -129,7 +143,56 @@ li {
 }
 
 /* btn */
-.btn {
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.btn-1 {
+  font-size: 0.938rem;
+  color: #f4f4f4;
+  padding: 0.5rem 1.5rem;
+  background-color: #E21A66;
+  border-radius: 8px;
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  transition: all 0.5s ease;
+}
+
+.btn-1:hover {
+  color: #f2f2f2;
+  background-color: #ea437b;
+}
+
+.btn-2 {
+  font-size: 0.938rem;
+  color: #19191A;
+  padding: 0.5rem 1.5rem;
+  background-color: #E8A412;
+  border-radius: 8px;
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  transition: all 0.5s ease;
+}
+
+.btn-2:hover {
+  background-color: #d9ac26;
+}
+
+.btn-3 {
+  font-size: 0.938rem;
+  color: #f4f4f4;
+  padding: 0.5rem 1.5rem;
+  background-color: #01196D;
+  border-radius: 8px;
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  transition: all 0.5s ease;
+}
+
+.btn-3:hover {
+  color: #f2f2f2;
+  background-color: #150080;
+}
+
+.btn-4 {
   font-size: 0.938rem;
   color: #f4f4f4;
   padding: 0.5rem 1.5rem;
@@ -139,9 +202,24 @@ li {
   transition: all 0.5s ease;
 }
 
-.btn:hover {
+.btn-4:hover {
   color: #f2f2f2;
   background-color: #01196D;
+}
+
+.btn-5 {
+  font-size: 0.938rem;
+  color: #f4f4f4;
+  padding: 0.5rem 1.5rem;
+  background-color: #EC294C;
+  border-radius: 8px;
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  transition: all 0.5s ease;
+}
+
+.btn-5:hover {
+  color: #f2f2f2;
+  background-color: #C1294C;
 }
 
 /* Start Header */
